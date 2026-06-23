@@ -27,4 +27,5 @@ SoC의 기본 구성을 이루는 기본적인 요소들을 학습하고 RTL-to-
  - [Visul Studio Code](https://code.visualstudio.com/) : 여러분의 수명을 눌려줄 똑똑한 Editor Program
  - [GIT](https://git-scm.com/) : 여러분의 프로젝트 관리와 협업을 도와줄 Source Control Management
 - [GitHub](https://github.com/) : Git을 Clound Server에 운영하는 오픈소스 덕후들의 성지
+- [Markdown Guide](https://www.markdownguide.org/) : `Markdown` 문법을 활용하여 포트폴리오 페이지를 멋지게 꾸며 보아요
   
