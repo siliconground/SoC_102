@@ -1,28 +1,29 @@
 `timescale 1ns / 1ps
 
-module tb_pipeline (); // top module
+module tb_pipeline ();
 
-// stimulus signal declaration
-reg clk, rst_n;
-reg [9:0] in1;
-reg [9:0] in2;
-reg [9:0] in3;
-wire [11:0] piped_out;
+// stimulus signal
+reg 		   clk, rst_n	;
+reg 	[9:0 ] in1			;
+reg 	[9:0 ] in2			;
+reg 	[9:0 ] in3			;
+// monitor signal
+wire 	[11:0] piped_out	;
 
 // clock generation
 always #5 clk = ~clk; // 100MHz
 
 initial begin
 	// t=0: init
-	clk = 1'b0;
-	rst_n = 1'b0; // rst enable
-	in1 = 10'd0;
-	in2 = 10'd0;
-	in3 = 10'd0;
+	clk 	= 1'b0			;
+	rst_n 	= 1'b0			; // rst enable
+	in1 	= 10'd0			;
+	in2 	= 10'd0			;
+	in3 	= 10'd0			;
 
 	// t=10: rst_n unset for arithmetic operation
 	#10
-	rst_n = 1'b1;
+	rst_n = 1'b1			;
 
 	// t=30: inject data1
 	#20
@@ -47,18 +48,18 @@ end
 
 // DUT instantiation
 pipeline uut (
-	.clk (clk), 
-	.rst_n (rst_n), 
-	.in1 (in1), 
-	.in2 (in2), 
-	.in3 (in3), 
-	.out (piped_out)
+	.clk 	(clk		), 
+	.rst_n 	(rst_n		), 
+	.in1 	(in1		), 
+	.in2 	(in2		), 
+	.in3 	(in3		), 
+	.out 	(piped_out	)
 );
 
 // Dumpfile generation
 initial begin
-	$dumpfile("./pipeline.vcd");
-	$dumpvars(1, uut);
+	$dumpfile("./pipeline.vcd")	;
+	$dumpvars(1, uut)			;
 end
 
 endmodule
