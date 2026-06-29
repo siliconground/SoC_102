@@ -9,10 +9,10 @@ set:
 compile:
 	xmvlog -MESS -linedebug ./*v
 elab:
-	xmelab -MESS -access rwc tb_bcd_to_7seg
+	xmelab -MESS -access rwc tb_bidirectional_bus_driver
 
 sim:
-	xmsim -MESS tb_bcd_to_7seg -gui
+	xmsim -MESS tb_bidirectional_bus_driver -gui
 
 
 all: clean set compile elab sim

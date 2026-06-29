@@ -11,4 +11,4 @@ xmvlog -MESS -linedebug ./*v
 xmelab -MESS -access rwc tb_gpio_mux
 
 # run simulation in CLI mode
-xmsim -MESS tb_gpio_mux
+xmsim -MESS tb_gpio_mux -gui
