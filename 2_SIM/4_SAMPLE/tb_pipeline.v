@@ -59,7 +59,7 @@ pipeline uut (
 // Dumpfile generation
 initial begin
 	$dumpfile("./pipeline.vcd")	;
-	$dumpvars(1, uut)			;
+	$dumpvars(0, tb_pipeline)	;
 end
 
 endmodule

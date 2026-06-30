@@ -22,11 +22,11 @@ output      o_gpio_pin            ;
 // modeling
 reg o_gpio_pin; // type override
 always @(*) begin
-    case (i_sel) // binary coded selction signal(TODO: use gray code)
+    case (i_sel) // binary coded selction signal
         2'b00   : o_gpio_pin = i_tx0           ;          
         2'b01   : o_gpio_pin = i_rx0           ;          
-        2'b10   : o_gpio_pin = i_pwm1          ;         
-        2'b11   : o_gpio_pin = i_other_signal  ; 
+        2'b11   : o_gpio_pin = i_pwm1          ;         
+        2'b10   : o_gpio_pin = i_other_signal  ; 
         default : o_gpio_pin = 1'bz            ;       
     endcase
 end

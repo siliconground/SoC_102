@@ -2,11 +2,13 @@
 
 module tb_gpio_mux;
 
+// stimulus: connected to input(active)
 reg [1:0]   i_sel           ;
 reg         i_tx0           ;
 reg         i_rx0           ;
 reg         i_pwm1          ;
 reg         i_other_signal  ;
+// monitor signal: connected to output(passive)
 wire        o_gpio_pin      ;
 
     // DUT instantiation
@@ -27,14 +29,14 @@ end
 
 // apply stimulus
 initial begin
-    // init
+    // t=0: init
     i_tx0 = 1'b0; i_rx0 = 1'b1; i_pwm1 = 1'b0; i_other_signal = 1'b1;
 
-    // teset ventor generation
+    // test ventor generation
     i_sel = 2'b00; #10;
     i_sel = 2'b01; #10;
-    i_sel = 2'b10; #10;
     i_sel = 2'b11; #10;
+    i_sel = 2'b10; #10;
 
     $finish;
 end

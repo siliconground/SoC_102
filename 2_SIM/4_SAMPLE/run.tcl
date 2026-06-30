@@ -11,4 +11,4 @@ xmvlog -MESS -linedebug ./*v
 xmelab -MESS -access rwc tb_pipeline
 
 # run simulation in CLI mode
-xmsim -MESS tb_pipeline 
+xmsim -MESS tb_pipeline -gui 
