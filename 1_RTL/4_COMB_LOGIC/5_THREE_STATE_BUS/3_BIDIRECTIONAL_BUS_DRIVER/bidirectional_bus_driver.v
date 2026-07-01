@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-//3state_ex2.v
+
 module bidirectional_bus_driver (
     // port list
     i_data_to_bus       ,
