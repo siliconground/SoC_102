@@ -12,7 +12,7 @@ elab:
 	xmelab -MESS -access rwc tb_bcd_to_7seg
 
 sim:
-	xmsim -MESS tb_bcd_to_7seg -gui
+	xmsim -MESS tb_bcd_to_7seg
 
 
 all: clean set compile elab sim

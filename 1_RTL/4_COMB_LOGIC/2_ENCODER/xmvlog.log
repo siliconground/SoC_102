@@ -1,0 +1,15 @@
+xmvlog(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	24.03-s005: Started on Jun 30, 2026 at 17:06:16 KST
+xmvlog
+    -MESS
+    -linedebug
+    ./interrupt_controller.v
+    ./tb_interrupt_controller.v
+
+file: ./interrupt_controller.v
+	module work_lib.interrupt_controller
+		errors: 0, warnings: 0
+file: ./tb_interrupt_controller.v
+	module work_lib.tb_interrupt_controller
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	24.03-s005: Exiting on Jun 30, 2026 at 17:06:16 KST  (total: 00:00:00)
