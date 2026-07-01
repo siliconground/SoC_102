@@ -20,7 +20,7 @@ wire [7:0]  w_mux_out       ;
 
 // modeling
 assign w_select = i_en_a ^ i_en_b                   ;
-
+// xor (w_select, i_en_a, i_en_b);
     
 assign w_mux_out =  (i_en_a) ? i_data_a :
                     (i_en_b) ? i_data_b :
