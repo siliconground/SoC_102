@@ -2,7 +2,7 @@
 
 module register (
 	// port list
-	rst_n		, 
+	rst_n		, // active low(negative)
 	clk			, 
 	i_in1		, // 1-bit input 
 	i_in2		, // 4-bit input
@@ -20,7 +20,7 @@ output 	[3:0] 	o_out2		;
 
 
 // behavioral modeling: 1-bit register
-reg o_out1								;
+reg o_out1// type overriding							;
 always @(posedge clk or negedge rst_n) 
 begin
 	if ( ~rst_n ) o_out1 <= 1'b0		; // active low | rst enable
