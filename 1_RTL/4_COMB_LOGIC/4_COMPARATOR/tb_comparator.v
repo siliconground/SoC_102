@@ -17,6 +17,11 @@ comparator uut (
   .o_equal(o_equal),
   .o_less(o_less)
  );
+// Dumpfile gen
+initial begin
+    $dumpfile("./comparator.vcd"   );
+    $dumpvars(0, tb_comparator     );
+end
 
   // Test Scenario
 initial begin

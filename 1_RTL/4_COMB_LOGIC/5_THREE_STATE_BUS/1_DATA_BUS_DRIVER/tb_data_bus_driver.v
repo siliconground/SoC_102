@@ -19,6 +19,11 @@ data_bus_driver uut (
     .o_bus_data (o_bus_data )
 );
 
+// Dumpfile gen
+initial begin
+    $dumpfile("./data_bus_driver.vcd"   );
+    $dumpvars(0, tb_data_bus_driver     );
+end
 // Test Scenario 
 initial begin
     // system task for monitoring
