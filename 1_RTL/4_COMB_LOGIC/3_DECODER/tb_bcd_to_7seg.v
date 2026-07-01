@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-//tb_i_bcdtoseg.v
+
 module tb_bcd_to_7seg;
 
 // stimulus signal
