@@ -29,16 +29,16 @@ end
 initial begin
     rst_n       = 1'b0; i_serial_in = 0;
     #15 rst_n   = 1'b1;
-    // random vector 생성 test
+    // random vector generation
     repeat(WIDTH*2) begin
         @(negedge clk);
-        i_serial_in = $random % 2; // 랜덤 비트 입력 (SoC 환경에서의 데이터 입력 상황 모사)
+        i_serial_in = $random % 2; 
     end
-    // 추가 클럭 사이클 진행 후 종료
+    
     #50 $finish;
 end
 
-// 결과 모니터링
+// independent monitoring block
 initial begin
     $monitor("time=%0t | reset=%b | serial_in=%b | parallel_out=%b", $time, rst_n, i_serial_in, o_parallel_out);
 end
