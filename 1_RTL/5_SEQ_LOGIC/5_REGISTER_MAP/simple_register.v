@@ -18,14 +18,14 @@ reg     [7:0]   r_reg8      ;
 
 // modeling
 always @(posedge clk or negedge rst_n) begin
-    if (~rst_n) begin
+    if (~rst_n) begin // init
         r_reg8 <= 8'b0      ; 
-    end else if (wen) begin
+    end else if (wen) begin // write enable
         r_reg8 <= i_wdata   ; 
     end
 end
 
     
-assign o_rdata = r_reg8     ;
+assign o_rdata = r_reg8     ; 
 
 endmodule
