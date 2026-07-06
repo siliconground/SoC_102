@@ -29,7 +29,7 @@ always @(posedge clk_in or negedge rst_n) begin
         end else begin
             r_count <= r_count + 1'b1   ;
         end
-            
+    
          // toggle divided clock when r_count comes to the half
         if (r_count == (DIVISOR / 2) - 1) begin
             o_clk_out <= 1'b1           ;
