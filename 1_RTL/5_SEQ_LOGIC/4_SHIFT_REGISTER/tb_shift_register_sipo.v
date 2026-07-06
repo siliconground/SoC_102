@@ -27,9 +27,10 @@ end
 
 // Test Scenario
 initial begin
+    // t=0: init
     rst_n       = 1'b0; i_serial_in = 0;
-    #15 rst_n   = 1'b1;
-    // random vector generation
+    #15 rst_n   = 1'b1; // reset off = system on
+    // random vector generations
     repeat(WIDTH*2) begin
         @(negedge clk);
         i_serial_in = $random % 2; 
